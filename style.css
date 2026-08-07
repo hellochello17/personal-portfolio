@@ -282,12 +282,13 @@ h1 {
 
 .project-placeholder {
   margin-top: 0.8rem;
-  padding: 1rem;
-  border: 1px dashed rgba(255, 255, 255, 0.35);
-  border-radius: 14px;
-  color: rgba(244, 247, 251, 0.8);
-  text-align: center;
-  background: rgba(255, 255, 255, 0.05);
+  min-height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  color: transparent;
+  text-align: left;
+  background: transparent;
 }
 
 .admin-only {
