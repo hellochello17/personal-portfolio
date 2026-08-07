@@ -65,11 +65,12 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .photo-side {
   flex: 0 0 140px;
+  min-width: 140px;
 }
 
 .profile-image {
@@ -83,6 +84,7 @@ body {
 
 .profile-info {
   flex: 1;
+  min-width: 0;
 }
 
 h1 {
@@ -322,12 +324,13 @@ h1 {
   }
 
   .profile-main {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
   }
 
   .photo-side {
-    flex-basis: auto;
+    flex-basis: 140px;
+    min-width: 140px;
   }
 
   .profile-card,
