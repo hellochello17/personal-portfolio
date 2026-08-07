@@ -290,6 +290,37 @@ h1 {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.admin-only {
+  display: none;
+}
+
+.admin-only.visible {
+  display: block;
+  margin-top: 0.85rem;
+}
+
+.project-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.admin-btn {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.admin-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
 .top-nav a.active {
   background: var(--accent);
   color: #071422;
