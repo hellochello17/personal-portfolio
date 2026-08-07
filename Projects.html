@@ -42,18 +42,30 @@
       <h2>UI/UX Design</h2>
       <p>Designing intuitive interfaces, user flows, and polished layouts for web and mobile experiences.</p>
       <div class="project-placeholder"></div>
+      <div class="project-controls admin-only">
+        <button type="button" class="admin-btn" data-action="upload" data-section="uiux">Upload</button>
+        <button type="button" class="admin-btn" data-action="add-link" data-section="uiux">Add a link here</button>
+      </div>
     </section>
 
     <section class="project-section" data-section="systems">
       <h2>Systems & Development</h2>
       <p>Building functional digital solutions with clean logic, problem-solving, and modern web practices.</p>
       <div class="project-placeholder"></div>
+      <div class="project-controls admin-only">
+        <button type="button" class="admin-btn" data-action="upload" data-section="systems">Upload</button>
+        <button type="button" class="admin-btn" data-action="add-link" data-section="systems">Add a link here</button>
+      </div>
     </section>
 
     <section class="project-section" data-section="visual">
       <h2>Visual Design & Canva/Photoshop</h2>
       <p>Creating promotional materials, social media graphics, posters, and edited visuals for digital content.</p>
       <div class="project-placeholder"></div>
+      <div class="project-controls admin-only">
+        <button type="button" class="admin-btn" data-action="upload" data-section="visual">Upload</button>
+        <button type="button" class="admin-btn" data-action="add-link" data-section="visual">Add a link here</button>
+      </div>
     </section>
 
   </main>
@@ -68,29 +80,7 @@
         return;
       }
       window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
-        document.querySelectorAll('.project-section').forEach(section => {
-          const sectionKey = section.dataset.section;
-          const controls = document.createElement('div');
-          controls.className = 'project-controls';
-
-          const uploadBtn = document.createElement('button');
-          uploadBtn.type = 'button';
-          uploadBtn.className = 'admin-btn';
-          uploadBtn.textContent = 'Upload';
-          uploadBtn.dataset.action = 'upload';
-          uploadBtn.dataset.section = sectionKey;
-
-          const linkBtn = document.createElement('button');
-          linkBtn.type = 'button';
-          linkBtn.className = 'admin-btn';
-          linkBtn.textContent = 'Add a link here';
-          linkBtn.dataset.action = 'add-link';
-          linkBtn.dataset.section = sectionKey;
-
-          controls.appendChild(uploadBtn);
-          controls.appendChild(linkBtn);
-          section.appendChild(controls);
-        });
+        document.querySelectorAll('.admin-only').forEach(el => el.classList.add('visible'));
 
         function attachAdminEvents(button) {
           button.addEventListener('click', function () {
