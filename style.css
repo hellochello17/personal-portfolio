@@ -10,19 +10,27 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--navy), var(--navy-light));
-  color: var(--text);
-  padding: 1.2rem;
-  line-height: 1.5;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  color: var(--text);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-shell,
 .portfolio-page {
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
+  flex: 1 0 auto;
   padding-top: 0.3rem;
 }
 
@@ -289,12 +297,17 @@ h1 {
 .site-footer {
   text-align: center;
   margin-top: 1.5rem;
-  padding: 1rem 0 0.3rem;
-  color: rgba(244, 247, 251, 0.8);
+  padding: 1rem;
+  color: var(--text);
   font-size: 0.95rem;
-}
-
-.site-footer p {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  width: calc(100% - 2.4rem);
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
   margin: 0.2rem 0;
 }
 
