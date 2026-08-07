@@ -291,15 +291,6 @@ h1 {
   background: transparent;
 }
 
-.admin-only {
-  display: none;
-}
-
-.admin-only.visible {
-  display: block;
-  margin-top: 0.85rem;
-}
-
 .project-controls {
   display: flex;
   gap: 0.75rem;
