@@ -73,18 +73,13 @@
   <script>
     (function() {
       const ADMIN_SECRET = 'portfolio-admin-2026';
-      const storageKey = 'portfolioAdminToken';
       const params = new URLSearchParams(window.location.search);
       const adminCode = params.get('admin');
-      const isStoredAdmin = localStorage.getItem(storageKey) === ADMIN_SECRET;
-      const isAdmin = adminCode === ADMIN_SECRET || isStoredAdmin;
-      if (adminCode === ADMIN_SECRET) {
-        localStorage.setItem(storageKey, ADMIN_SECRET);
-        window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
-      }
+      const isAdmin = adminCode === ADMIN_SECRET;
       if (!isAdmin) {
         return;
       }
+      window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
       document.querySelectorAll('.admin-only').forEach(el => el.classList.add('visible'));
       document.querySelectorAll('.admin-btn').forEach(button => {
         button.addEventListener('click', function () {
