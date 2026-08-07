@@ -86,15 +86,21 @@ body {
 }
 
 h1 {
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.15rem;
   font-size: clamp(2rem, 4vw, 2.8rem);
   letter-spacing: 0.02em;
 }
 
-.intro {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  margin: 0 0 0.4rem;
+.profile-copy {
+  margin: 0.15rem 0 0;
+}
+
+.profile-copy h2 {
+  margin: 0.1rem 0;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.25;
 }
 
 .role-line {
