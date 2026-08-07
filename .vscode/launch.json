@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Portfolio in Chrome",
+            "url": "file:///c:/Users/raych/Desktop/Personal%20Portfolio/index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
